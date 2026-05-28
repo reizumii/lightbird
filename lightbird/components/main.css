@@ -14,21 +14,26 @@
 }
 
 /* TODO: change this */
+@media (-moz-platform: windows) {
+  :root:not(#messengerWindow) {
+    background: transparent !important;
+    --foldertree-background: transparent !important;
+  }
+}
 #tabpanelcontainer {
   background-color: transparent !important;
 }
 #folderPane {
-  --sidebar-background: transprent;
-}
-:root:not(#messengerWindow) {
-  background: transparent !important;
-  --foldertree-background: transparent !important;
+  --sidebar-background: transparent;
 }
 .list-header-bar:not([hidden]) {
   --layout-background-1: transparent;
 }
 #threadTree[rows="thread-card"] {
   --tree-pane-background: transparent;
+}
+#threadPane > tree-view {
+  --tree-view-bg: transparent;
 }
 
 /* list tree */
@@ -77,6 +82,12 @@
       }
     }
   }
+  & li {
+    &[data-tag-key] > .container > .icon {
+      fill: var(--icon-color) !important;
+      --icon-tag: var(--lb-icon-tag-fill);
+    }
+  }
   & .icon {
     width: var(--lb-icon-size-md) !important;
     height: var(--lb-icon-size-md) !important;
@@ -104,8 +115,13 @@
       transform: unset !important;
     }
     &::before {
+      content: "";
+      width: 3px;
       height: var(--lb-icon-line-md);
+      background-color: var(--indicator-background);
       border: 0 !important;
+      border-radius: 3px;
+      position: absolute;
       inset-inline-start: calc(var(--indent) - 10px) !important;
       top: 50% !important;
       transform: translateY(-50%) !important;
@@ -199,14 +215,23 @@
   & > .card-layout > td {
     padding-inline: 4px !important;
 
+    &[aria-selected="true"] > .card-container {
+      --indicator-background: var(--selected-item-color);
+      --tree-card-background: var(--lb-button-hover-bgcolor);
+    }
     & > .card-container {
       border: 0 !important;
       --tree-card-background: transparent;
       --tree-card-content-radius: var(--button-border-radius);
 
       &::before {
+        content: "";
+        width: 3px;
         height: var(--lb-icon-line-xl);
+        background-color: var(--indicator-background);
         border: 0 !important;
+        border-radius: 3px;
+        position: absolute;
         inset-inline-start: 0 !important;
         top: 50% !important;
         transform: translateY(-50%) !important;
@@ -438,10 +463,10 @@
   padding-bottom: 0 !important;
 }
 #calendarContent {
-  --layout-background-0: transprent;
+  --layout-background-0: transparent;
 }
 #calSidebar {
-  --layout-background-2: transprent;
+  --sidebar-background: transparent;
 }
 #primaryButtonSidePanel {
   justify-content: start !important;
@@ -617,6 +642,7 @@ calendar-minimonth {
   display: none !important;
 }
 button.calview-toggle-item {
+  position: relative;
   display: flex;
   align-items: center;
   min-height: var(--lb-button-height) !important;
@@ -637,6 +663,16 @@ button.calview-toggle-item {
     display: flex;
     fill: var(--lb-text-color);
     -moz-context-properties: fill;
+  }
+  &[aria-selected="true"]::after {
+    content: "";
+    width: var(--lb-icon-line-md);
+    height: 2px;
+    background: var(--selected-item-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
   }
 }
 #calTabDay::before {

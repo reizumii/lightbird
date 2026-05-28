@@ -18,6 +18,7 @@ button[part="dialog-button"] {
     height: var(--lb-button-height) !important;
   }
   &.button-primary {
+    font-weight: 500 !important;
     fill: var(--button-primary-text-color) !important;
     border-top-color: var(--lb-button-primary-border-top) !important;
     border-bottom-color: var(--lb-button-primary-border-bottom) !important;
