@@ -17,7 +17,7 @@
 
 /* tagline font */
 @font-face {
-  font-family: "Junicode";
-  src: url("../assets/fonts/JunicodeVF-Roman.woff2") format("woff2");
+  font-family: "Instrument Serif";
+  src: url("../assets/fonts/Instrument_Serif.woff2") format("woff2");
   font-display: swap;
 }

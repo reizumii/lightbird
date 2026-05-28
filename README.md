@@ -60,9 +60,9 @@ Here's a sample `custom.css` that makes Lightbird red:
 ```css
 /* makes lightbird red */
 :root {
-	--selected-item-color: rgba(255, 0, 0, 0.1) !important;
-	--lb-text-color: rgba(255, 0, 0) !important;
-	--lb-panel-bgcolor: rgba(255, 0, 0, 0.05) !important;
+  --selected-item-color: rgba(255, 0, 0, 0.1) !important;
+  --lb-text-color: rgba(255, 0, 0) !important;
+  --lb-panel-bgcolor: rgba(255, 0, 0, 0.05) !important;
 }
 ```
 
@@ -85,6 +85,6 @@ The icons used for this theme are from [Microsoft's Fluent UI System Icons](http
 
 The bird and mail icon is derivative work based on [Microsoft's Fluent Emoji](https://github.com/microsoft/fluentui-emoji)
 
-The font used in the Welcome page is [Junicode](https://github.com/psb1558/Junicode-font)
+The font used in the Welcome page is [Instrument Serif](https://github.com/Instrument/instrument-serif)
 
 Cloud background image by [engin akyurt](https://unsplash.com/@enginakyurt) on [Unsplash](https://unsplash.com/photos/white-clouds-under-blue-sky-during-daytime-gJILnne_HFg)
