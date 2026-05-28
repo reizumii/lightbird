@@ -2,10 +2,14 @@
 
 <p align="center">An elegant theme modification for Thunderbird 🐦️</p>
 
-<p align="center"><img src="images/lightbird.webp" alt="Mockup of Lightbird"></p>
+<picture>
+	<source media="(prefers-color-scheme: light)" srcset="images/lightbird-light.webp">
+	<source media="(prefers-color-scheme: dark)" srcset="images/lightbird-dark.webp">
+	<img width="1400" alt="Mockup of Lightbird on Windows">
+</picture>
 
 > [!WARNING]
-> **This theme is currently an early work-in-progress and only light mode is supported!!** Only the Mail feature is almost finished as of now. Other parts of Thunderbird may appear broken for some time. Use at your own risk!
+> **This theme is currently an early work-in-progress!** Only the Mail and Calendar sections are almost finished as of now. Other parts of Thunderbird may appear broken for some time. Use at your own risk!
 >
 > The only functional use case for now is just reading emails and viewing calendar events.
 
@@ -74,10 +78,9 @@ And then, append this line in `userChrome.css`
 
 ## Note
 
-- **This theme is incomplete and a work-in-progress.**
-- Only works with system light theme.
-- Mica transparency only works on Windows.
-- Untested on macOS and Linux.
+- **This theme is incomplete and a work-in-progress**
+- Mica and Acrylic window materials only work on Windows
+- Untested on macOS and Linux
 
 ## Acknowledgements
 

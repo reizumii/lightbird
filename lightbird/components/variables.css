@@ -6,23 +6,24 @@
 :root {
   --selected-item-color: AccentColor !important;
 
-  --lb-panel-bgcolor: rgba(255, 255, 255, 0.5);
-  --lb-text-color: rgba(0, 0, 0, 0.9);
-  --lb-text-ghost-color: rgba(0, 0, 0, 0.5);
-  --lb-text-primary-color: rgba(255, 255, 255, 1);
-  --lb-space-icon-color: rgba(0, 0, 0, 0.5);
-  --lb-button-hover-bgcolor: rgba(0, 0, 0, 0.04);
-  --lb-button-active-bgcolor: rgba(0, 0, 0, 0.06);
-  --lb-button-selected-bgcolor: rgba(0, 0, 0, 0.04);
-  --lb-button-toggle-enabled-bgcolor: rgba(255, 255, 255, 0.7);
-  --lb-button-primary-border-top:  rgba(255, 255, 255, 0.2);
-  --lb-button-primary-border-bottom:  rgba(0, 0, 0, 0.2);
-  --lb-input-bgcolor: rgba(255, 255, 255, 0.7);
+  --lb-panel-bgcolor: light-dark(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.03));
+  --lb-text-color: light-dark(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.9));
+  --lb-text-ghost-color: light-dark(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+  --lb-text-primary-color: light-dark(rgba(255, 255, 255, 1), rgba(0, 0, 0, 1));
+  --lb-space-icon-color: light-dark(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
+  --lb-button-hover-bgcolor: light-dark(rgba(0, 0, 0, 0.04), rgba(255, 255, 255, 0.04));
+  --lb-button-active-bgcolor: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  --lb-button-selected-bgcolor: light-dark(rgba(0, 0, 0, 0.04), rgba(255, 255, 255, 0.04));
+  --lb-button-toggle-enabled-bgcolor: light-dark(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
+  --lb-button-primary-border-top: rgba(255, 255, 255, 0.2);
+  --lb-button-primary-border-bottom: rgba(0, 0, 0, 0.2);
+  --lb-input-bgcolor: light-dark(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.06));
   --lb-button-group-bgcolor: rgba(0, 0, 0, 0.02);
-  --lb-infobar-warning-bgcolor: #fff4ce;
-  --lb-border-color-1: rgba(0, 0, 0, 0.06);
-  --lb-border-color-2: rgba(0, 0, 0, 0.08);
-  --lb-border-color-3: rgba(0, 0, 0, 0.25);
+  --lb-infobar-warning-bgcolor: light-dark(#fff4ce, rgba(244, 206, 70, 0.1));
+  --lb-border-color-1: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.06));
+  --lb-border-color-2: light-dark(rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.08));
+  --lb-border-color-3: light-dark(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.25));
+  --lb-border-color-frame: light-dark(var(--lb-border-color-2), rgba(0, 0, 0, 0.3));
 
   --lb-toolbar-height: 48px;
   --lb-header-height: 48px;
@@ -58,6 +59,8 @@
 
   --button-border-radius: 4px !important;
   --selected-item-text-color: var(--lb-text-primary-color) !important;
+  --folderpane-unread-count-text: var(--lb-text-primary-color) !important;
+  --new-folder-color: var(--selected-item-color) !important;
 
   --layout-border-0: var(--lb-border-color-1) !important;
   --sidebar-border-color: var(--lb-border-color-1) !important;

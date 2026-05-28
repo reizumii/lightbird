@@ -96,6 +96,7 @@ button.email-action-flagged {
   min-height: 48px;
   border: 1px solid var(--lb-border-color-1) !important;
   --message-bar-background-color: var(--lb-infobar-warning-bgcolor) !important;
+  --message-bar-text-color: var(--lb-text-color) !important;
   --message-bar-icon-url: var(--lb-icon-warning-circle-fill) !important;
 }
 div.container {

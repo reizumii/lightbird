@@ -227,16 +227,28 @@
   }
 }
 .PanelUI-subView .subviewbutton-nav::after {
+  fill: var(--lb-text-color) !important;
   width: var(--lb-icon-size-sm) !important;
   height: var(--lb-icon-size-sm) !important;
+  -moz-context-properties: fill, fill-opacity !important;
+}
+menupopup > menu::after {
+  -moz-context-properties: fill, fill-opacity !important;
+}
+.folderMenuItem {
+  &::part(icon), & > .menu-icon {
+    fill: var(--lb-text-color) !important;
+  }
 }
 .tab-icon-image:not([src="chrome://branding/content/icon48.png"]) {
   width: var(--lb-icon-size-md) !important;
   height: var(--lb-icon-size-md) !important;
   fill: var(--lb-text-color) !important;
 }
-.tab-close-button {
+.tab-close-icon {
   content: var(--lb-icon-close-12);
+  width: 12px !important;
+  height: 12px !important;
 }
 img {
   &[src="chrome://messenger/skin/icons/new/compact/inbox.svg"] {

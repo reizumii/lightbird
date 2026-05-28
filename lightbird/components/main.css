@@ -7,7 +7,7 @@
 #tabmail {
   background-color: var(--lb-panel-bgcolor);
   border-top-left-radius: 8px;
-  border: 1px solid var(--lb-border-color-2);
+  border: 1px solid var(--lb-border-color-frame);
   border-bottom: 0;
   border-right: 0;
   overflow: clip;
@@ -654,6 +654,8 @@ button.calview-toggle-item {
   --calendar-view-toggle-border-color: var(--lb-border-color-2);
   --calendar-view-toggle-hover-background: var(--lb-button-hover-bgcolor);
   --calendar-view-toggle-active-background: var(--lb-button-active-bgcolor);
+  --calendar-view-toggle-selected-background: var(--lb-button-selected-bgcolor);
+  --calendar-view-toggle-selected-hover-background: var(--lb-button-selected-bgcolor);
   --button-border-color: transparent;
 
   &::before {
@@ -667,8 +669,9 @@ button.calview-toggle-item {
   &[aria-selected="true"]::after {
     content: "";
     width: var(--lb-icon-line-md);
-    height: 2px;
+    height: 3px;
     background: var(--selected-item-color);
+    border-radius: 4px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
